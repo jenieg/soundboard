@@ -1,25 +1,24 @@
-// Store reference to all audio elements
+// Get All Audio
 const sounds = document.querySelectorAll('audio');
 
-// Variable to track the currently playing sound
+// Track the currently playing sound
 let currentlyPlaying = null;
 
-// Add event listener for keydown events
+// Play Sound on Keydown
 window.addEventListener('keydown', (event) => {
-    // Check if the key pressed is between 1 and 9 on keyboard (49-57) or numpad (97-105)
     const keyCode = event.keyCode;
-    const isStandardKey = keyCode >= 49 && keyCode <= 57; // Main keyboard keys 1-9
-    const isNumpadKey = keyCode >= 97 && keyCode <= 105;  // Numpad keys 1-9
+    const isStandardKey = keyCode >= 49 && keyCode <= 57;
+    const isNumpadKey = keyCode >= 97 && keyCode <= 105;
 
+    // if keyCode is Accepted
     if (isStandardKey || isNumpadKey) {
-        // Find the corresponding audio element by adjusting the numpad key codes to match the keyboard key codes
-        const adjustedKeyCode = isNumpadKey ? keyCode - 48 : keyCode; // Map numpad keys (97-105) to (49-57)
+        const adjustedKeyCode = isNumpadKey ? keyCode - 48 : keyCode;
         const audio = document.querySelector(`audio[data-key="${adjustedKeyCode}"]`);
 
         // If an audio is already playing, stop it
         if (currentlyPlaying && currentlyPlaying !== audio) {
             currentlyPlaying.pause();
-            currentlyPlaying.currentTime = 0; // Reset the audio to the beginning
+            currentlyPlaying.currentTime = 0;
         }
 
         // Play the new audio if it exists
@@ -29,3 +28,14 @@ window.addEventListener('keydown', (event) => {
         }
     }
 });
+
+//Button to Stop Audio
+const button = document.getElementById('btn-stop');
+
+button.addEventListener('click', function() {
+    if (currentlyPlaying) {
+        currentlyPlaying.pause();
+        currentlyPlaying.currentTime = 0;
+        currentlyPlaying = null;
+    }
+})
