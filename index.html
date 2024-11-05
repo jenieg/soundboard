@@ -3,57 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./ico-bird.png">
     <link rel="stylesheet" href="style.css">
     <title>Montana Bird Soundboard</title>
 </head>
 <body>
     <main class="container">
-        <div class="key">
+        <div data-key="49" class="key">
             <kbd>1</kbd>
             <span class="sound">American Goldfinch</span>
         </div>
 
-        <div class="key">
+        <div data-key="50" class="key">
             <kbd>2</kbd>
             <span class="sound">American Robin</span>
         </div>
 
-        <div class="key">
+        <div data-key="51" class="key">
             <kbd>3</kbd>
             <span class="sound">Bewick's Wren</span>
         </div>
 
-        <div class="key">
+        <div data-key="52" class="key">
             <kbd>4</kbd>
             <span class="sound">Black Billed Robin</span>
         </div>
 
-        <div class="key">
+        <div data-key="53" class="key">
             <kbd>5</kbd>
             <span class="sound">Black-caspanspaned Chickadee</span>
         </div>
 
-        <div class="key">
+        <div data-key="54" class="key">
             <kbd>6</kbd>
             <span class="sound">Brown-headed Cowbird</span>
         </div>
 
-        <div class="key">
+        <div data-key="55" class="key">
             <kbd>7</kbd>
             <span class="sound">Dark-eyed Junco</span>
         </div>
 
-        <div class="key">
+        <div data-key="56" class="key">
             <kbd>8</kbd>
             <span class="sound">Red-tailed Hawk</span>
         </div>
 
-        <div class="key">
+        <div data-key="57" class="key">
             <kbd>9</kbd>
             <span class="sound">Western Meadowlark</span>
         </div>
     </main>
 
-    <script src="main.js"></script>
+
+    <audio data-key="49" src="./sounds/americangoldfinch.mp3"></audio>
+    <audio data-key="50" src="./sounds/americanrobin.mp3"></audio>
+    <audio data-key="51" src="./sounds/bewickswren.mp3"></audio>
+    <audio data-key="52" src="./sounds/blackbilledrobin.mp3"></audio>
+    <audio data-key="53" src="./sounds/blackcappedchickadee.mp3"></audio>
+    <audio data-key="54" src="./sounds/brownheadedcowbird.mp3"></audio>
+    <audio data-key="55" src="./sounds/darkeyedjunco.mp3"></audio>
+    <audio data-key="56" src="./sounds/redtailedhawk.mp3"></audio>
+    <audio data-key="57" src="./sounds/westernmeadowlark.mp3"></audio>
+
+    <script src="./main.js"></script>
 </body>
 </html>
