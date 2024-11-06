@@ -4,47 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./ico-bird.png">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <title>Montana Bird Soundboard</title>
 </head>
 <body>
-    <main>
-        <p>Press 1-9 on your keyboard to hear bird call.</p>
+    <main class="container mx-auto flex flex-col">
+        <p class="mx-auto">Press 1-9 on your keyboard to hear bird call.</p>
 
-        <div class="container">
-            <div data-key="49||97" class="key">
+        <div class="mx-auto flex flex-wrap gap-5">
+            <div data-key="49||97" class="key flex flex-col">
                 <kbd>1</kbd>
                 <span class="sound">American Goldfinch</span>
             </div>
-            <div data-key="50||98" class="key">
+            <div data-key="50||98" class="key flex flex-col">
                 <kbd>2</kbd>
                 <span class="sound">American Robin</span>
             </div>
-            <div data-key="51||99" class="key">
+            <div data-key="51||99" class="key flex flex-col">
                 <kbd>3</kbd>
                 <span class="sound">Bewick's Wren</span>
             </div>
-            <div data-key="52||100" class="key">
+            <div data-key="52||100" class="key flex flex-col">
                 <kbd>4</kbd>
                 <span class="sound">Black Billed Robin</span>
             </div>
-            <div data-key="53||101" class="key">
+            <div data-key="53||101" class="key flex flex-col">
                 <kbd>5</kbd>
-                <span class="sound">Black-caspanspaned Chickadee</span>
+                <span class="sound">Black-capped Chickadee</span>
             </div>
-            <div data-key="54||102" class="key">
+            <div data-key="54||102" class="key flex flex-col">
                 <kbd>6</kbd>
                 <span class="sound">Brown-headed Cowbird</span>
             </div>
-            <div data-key="55||103" class="key">
+            <div data-key="55||103" class="key flex flex-col">
                 <kbd>7</kbd>
                 <span class="sound">Dark-eyed Junco</span>
             </div>
-            <div data-key="56||104" class="key">
+            <div data-key="56||104" class="key flex flex-col">
                 <kbd>8</kbd>
                 <span class="sound">Red-tailed Hawk</span>
             </div>
-            <div data-key="57||105" class="key">
+            <div data-key="57||105" class="key flex flex-col">
                 <kbd>9</kbd>
                 <span class="sound">Western Meadowlark</span>
             </div>
